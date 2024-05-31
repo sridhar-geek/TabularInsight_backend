@@ -59,7 +59,7 @@ export const getProductRangeData = async (req, res) => {
 // desc: Get statics data for the selected month      route: /api/transations/statics/:month
 export const getStaticsDate = async (req, res) => {
   const selectedMonth = req.params.month;
-  if (selectedMonth < 1 || selectedMonth > 12)
+  if (selectedMonth < 1 || selectedMonth > 12 || selectedMonth === 'undefined' || selectedMonth === null)
     throw new BadRequestError("Invalid month, Select Month between 01 and 12");
 
   // Query MongoDB to get the relevant data
