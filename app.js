@@ -20,7 +20,7 @@ app.use(
     origin: "https://tabular-insight.vercel.app/",
   })
 );
-app.use(express.json());
+ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
