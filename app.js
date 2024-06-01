@@ -17,7 +17,7 @@ const app = express();
 app.use(
   cors({
     // origin: "http://localhost:5174",
-    origin: "https://tabular-insight.vercel.app/",
+    origin: "https://tabular-insight.vercel.app",
   })
 );
  app.use(express.json());
